@@ -1,0 +1,8 @@
+flask
+flask-restx
+python-dotenv
+google-genai
+numpy
+chromadb
+requests
+PyMuPDF
