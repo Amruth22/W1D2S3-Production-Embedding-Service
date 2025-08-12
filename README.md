@@ -107,6 +107,39 @@ Environment variables in `.env`:
 - `DEBUG` - Debug mode (default: false)
 - `CACHE_SIZE` - LRU cache size (default: 1000)
 
+## Troubleshooting
+
+### SQLite3 Compatibility Issue
+
+If you encounter the error:
+```
+RuntimeError: Your system has an unsupported version of sqlite3. Chroma requires sqlite3 >= 3.35.0.
+```
+
+**Quick Fix:**
+```bash
+# Run the setup script
+chmod +x setup.sh
+./setup.sh
+```
+
+**Manual Fix:**
+```bash
+# Install pysqlite3-binary
+pip install pysqlite3-binary
+
+# Reinstall requirements
+pip install -r requirements.txt
+```
+
+The code already includes compatibility fixes that automatically use `pysqlite3-binary` when available.
+
+### Other Common Issues
+
+- **Missing API Key**: Ensure `GEMINI_API_KEY` is set in your `.env` file
+- **Port Already in Use**: Change the `PORT` in `.env` or kill the process using the port
+- **Permission Issues**: Ensure write permissions for `chroma_db` and `uploads` directories
+
 ## Architecture
 
 ```
