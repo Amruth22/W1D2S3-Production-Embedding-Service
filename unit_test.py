@@ -8,6 +8,14 @@ import io
 from typing import Dict, Any
 import numpy as np
 
+# Fix for SQLite3 compatibility with ChromaDB
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 # Import existing modules for testing
 from embedding_service import EmbeddingService
 from pdf_extractor import PDFExtractor
