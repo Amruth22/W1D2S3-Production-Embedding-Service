@@ -300,18 +300,6 @@ MAX_TEXT_LENGTH=10000
 - **Concurrent Users**: Handle 10+ simultaneous requests
 - **Memory Usage**: Efficient memory management for large documents
 
-## 🚀 Advanced Features (Bonus Points)
-
-Implement these for extra credit:
-
-1. **Rate Limiting**: API rate limiting with Redis
-2. **Authentication**: JWT-based API authentication
-3. **Batch Processing**: Bulk document upload and processing
-4. **Monitoring**: Prometheus metrics and health checks
-5. **Docker Support**: Containerization with Docker Compose
-6. **Database Migration**: Version control for ChromaDB schema
-7. **Async Processing**: Background task processing with Celery
-
 ## 📝 Submission Requirements
 
 ### Required Files
