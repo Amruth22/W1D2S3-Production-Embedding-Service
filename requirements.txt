@@ -6,3 +6,4 @@ numpy
 chromadb
 requests
 PyMuPDF
+pysqlite3-binary
