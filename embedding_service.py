@@ -1,5 +1,14 @@
 import os
 import numpy as np
+
+# Fix for SQLite3 compatibility with ChromaDB
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 import chromadb
 from chromadb.config import Settings
 import hashlib
