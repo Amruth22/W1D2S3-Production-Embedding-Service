@@ -30,7 +30,7 @@ cp .env.example .env
 python app.py
 ```
 
-The API will be available at `http://127.0.0.1:5000`
+The API will be available at `http://0.0.0.0:8081`
 
 ## API Endpoints
 
@@ -87,12 +87,12 @@ POST /cache/clear        # Clear cache
 
 ```bash
 # Add documents
-curl -X POST http://127.0.0.1:5000/add \
+curl -X POST http://0.0.0.0:8081/add \
   -H "Content-Type: application/json" \
   -d '{"text": "The quick brown fox jumps over the lazy dog"}'
 
 # Search similar
-curl -X POST http://127.0.0.1:5000/search \
+curl -X POST http://0.0.0.0:8081/search \
   -H "Content-Type: application/json" \
   -d '{"query": "fast animal jumping", "k": 3}'
 ```
@@ -102,8 +102,8 @@ curl -X POST http://127.0.0.1:5000/search \
 Environment variables in `.env`:
 
 - `GEMINI_API_KEY` - Your Google Gemini API key (required)
-- `HOST` - API host (default: 127.0.0.1)
-- `PORT` - API port (default: 5000)
+- `HOST` - API host (hardcoded: 0.0.0.0)
+- `PORT` - API port (hardcoded: 8081)
 - `DEBUG` - Debug mode (default: false)
 - `CACHE_SIZE` - LRU cache size (default: 1000)
 
