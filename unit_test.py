@@ -27,7 +27,7 @@ class TestEmbeddingService(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """Set up test environment"""
-        cls.base_url = "http://127.0.0.1:5000/api/v1"
+        cls.base_url = "http://127.0.0.1:8081/api/v1"
         cls.embedding_service = EmbeddingService()
         cls.pdf_extractor = PDFExtractor()
         cls.sample_text = "The lighthouse keeper watched over ships in the stormy night."
