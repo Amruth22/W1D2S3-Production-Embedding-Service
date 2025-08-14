@@ -472,7 +472,7 @@ def file_too_large(error):
 
 if __name__ == '__main__':
     logger.info("Starting Embedding Service API...")
-    logger.info("Swagger UI available at: http://127.0.0.1:5000/docs/")
+    logger.info("Swagger UI available at: http://0.0.0.0:8081/docs/")
     logger.info("PDF Upload endpoint: POST /api/v1/documents/pdf")
     logger.info("Text Upload endpoint: POST /api/v1/documents/text")
     app.run(
