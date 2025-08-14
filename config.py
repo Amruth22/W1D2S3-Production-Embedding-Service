@@ -8,8 +8,8 @@ class Config:
     """Application configuration"""
     
     # Flask settings
-    HOST = os.getenv('HOST', '127.0.0.1')
-    PORT = int(os.getenv('PORT', 5000))
+    HOST = '0.0.0.0'  # Hardcoded for deployment
+    PORT = 8081       # Hardcoded for deployment
     DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
     
     # API settings
