@@ -7,3 +7,6 @@ chromadb
 requests
 PyMuPDF
 pysqlite3-binary
+pytest
+pytest-asyncio
+httpx
