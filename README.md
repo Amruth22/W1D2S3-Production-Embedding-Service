@@ -93,6 +93,49 @@ curl -X POST http://0.0.0.0:8081/add \
 
 # Search similar
 curl -X POST http://0.0.0.0:8081/search \
+
+## Testing
+
+### Async Test Suite
+
+The project includes a comprehensive async test suite using pytest and httpx:
+
+```bash
+# Install test dependencies
+pip install -r requirements-test.txt
+
+# Run tests with pytest (recommended)
+pytest tests.py -v
+
+# Or use the test runner script
+python run_tests.py
+
+# Run tests directly with asyncio
+python run_tests.py --direct
+
+# Run specific test
+pytest tests.py::test_generate_embedding -v
+```
+
+### Test Coverage
+
+The test suite includes 16 comprehensive test cases:
+
+- **Health Check** - API connectivity and service status
+- **Embedding Generation** - Core embedding functionality and validation
+- **Document Management** - Text and PDF document ingestion
+- **Search Operations** - Similarity search and validation
+- **Collection Management** - Collection info, stats, and reset
+- **Cache Management** - Cache statistics and functionality
+- **Error Handling** - Input validation and error responses
+- **Concurrent Operations** - Multi-request performance testing
+
+### Test Requirements
+
+- API server must be running at `http://localhost:8081`
+- Valid `GEMINI_API_KEY` configured in `.env`
+- All dependencies installed from `requirements.txt`
+
   -H "Content-Type: application/json" \
   -d '{"query": "fast animal jumping", "k": 3}'
 ```
