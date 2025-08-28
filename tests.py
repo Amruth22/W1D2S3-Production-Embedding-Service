@@ -6,7 +6,6 @@ import io
 from typing import Dict, Any
 
 BASE_URL = "http://localhost:8081/api/v1"
-
 BASE_URL = "http://localhost:8081/api/v1"
 
 @pytest.mark.asyncio
